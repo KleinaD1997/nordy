@@ -1,0 +1,95 @@
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    font-weight: 300;
+}
+.home a {
+  padding: 0 20px;
+  height: 45px;
+  line-height: 45px;
+  color: black;
+}
+
+.home a::before,
+.home a::after {
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background: black;
+  content: '';
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+
+.home a::before {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+}
+
+.home a::after {
+  right: 0;
+  bottom: 0;
+  transform: rotate(90deg);
+  transform-origin: 100% 0;
+}
+
+.home a:hover::before {
+    opacity: 1;
+  left: 50%;
+  transform: rotate(0deg) translateX(-50%);
+}
+
+.home a:hover::after {
+    opacity: 1;
+  right: 50%;
+  transform: rotate(0deg) translateX(50%);
+}	
+	.thank-you-page {
+	margin-top:5%;
+    text-align: center
+	}
+
+	.thank-you-page .thank-you-header {
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 48px
+	}
+
+	.thank-you-page .thank-you-back-link {
+    position: absolute;
+    top: 92px;
+    left: 0;
+    font-weight: 500;
+    font-size: 20px
+	}
+
+	.thank-you-page .thank-you-title {
+    font-family: spectral, sans-serif;
+    max-width: 680px;
+    margin: 7px auto 20px;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 500
+	}
+	
+.thank-you-page .error-title {
+    font-family: spectral, sans-serif;
+    max-width: 680px;
+    margin: 300px auto 20px;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 500
+	}
+
+.thank-you-page p {
+    max-width: 680px;
+    margin: 0 auto 38px;
+    font-size: 28px
+	}
+		

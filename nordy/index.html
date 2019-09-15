@@ -25,17 +25,19 @@
                         </button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                                <input type="tel" name="name" class="form-control align-self-end mt-5" id="name-input" aria-describedby="emailHelp" placeholder="Ваше имя" maxlength="18">
-                                <input type="tel" name="phone" class="form-control align-self-end mt-5" id="phone-input2" aria-describedby="emailHelp" placeholder="Ваш номер" maxlength="18">
+                    <form class = "send_form" method="post" action="mail/mail.php">
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <input type="tel" name="name" class="form-control align-self-end mt-5" id="name-input" aria-describedby="emailHelp" placeholder="Ваше имя" maxlength="18">
+                                    <input type="tel" name="phone" class="form-control align-self-end mt-5" id="phone-input2" aria-describedby="emailHelp" placeholder="Ваш номер" maxlength="18">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button type="button" class="btn btnwhite mod align-self-start">Оставить заявку</button>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btnwhite mod align-self-start">Оставить заявку</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
           </div>
@@ -47,7 +49,7 @@
     <header class="header wow fadeInDown">
         <nav class="navbar navbar-expand-md mt-4 mb-4">
                 <div class="container">
-                  <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+                  <a class="navbar-brand" href="/"><img src="img/logo.png"></a>
                         <ul class="navbar-nav ml-md-auto mt-2">
                           <li class="nav-item mr-md-5">
                             <a class="nav-link" href="mailto:mail@nordy.space">mail@nordy.space</a>
@@ -106,7 +108,10 @@
                     <div class="carousel-cell col-md-12">
                         <div class="scale"><a href="img/fslider2l.jpg" class="image-popup-zoom"><img src="img/fslider2.png"></a></div>
                     </div>
+                    <button class="carousel1-next button-next navigation-slider"><img src="img/next.png"/></button>
+	        		<button class="carousel1-prev button-prev navigation-slider"><img src="img/prev.png"/></button>
                 </div>
+
                 <div class="col-md-5 offset-md-1 mt-3 mt-md-0 wow fadeInRight">
                     <span class="mb-1">Проект</span>
                     <p class="mb-5">Квартира 54 м² в Москве. </p>
@@ -125,6 +130,8 @@
                         <div class="carousel-cell col-md-12">
                             <div class="scale"><a href="img/sslider2l.jpg" class="image-popup-zoom"><img src="img/sslider2.png"></a></div>
                         </div>
+	                   	<button class = "carousel2-next button-next navigation-slider"><img src="img/next.png"/></button>
+		                <button class = "carousel2-prev button-prev navigation-slider"><img src="img/prev.png"/></button> 
                     </div>
                     <div class="col-md-5 order-md-1 mt-3 mt-md-0 wow fadeInLeft">
                         <span class="mb-1">Проект</span>
@@ -143,6 +150,8 @@
                         <div class="carousel-cell col-md-12">
                             <div class="scale"><a href="img/tslider2l.jpg" class="image-popup-zoom"><img src="img/tslider2.png"></a></div>
                         </div>
+		                 <button class = "carousel3-next button-next navigation-slider"><img src="img/next.png"/></button>
+		                <button class = "carousel3-prev button-prev navigation-slider"><img src="img/prev.png"/></button> 
                     </div>
                     <div class="col-md-5 offset-md-1 mt-3 mt-md-0 wow fadeInRight">
                         <span class="mb-1">Проект</span>
@@ -367,13 +376,15 @@
                 <div class="col-md-5">
                         <div class="subscribe">Задайте дизайнеру любые интересующие вопросы и получите в подарок 10 000 рублей скидки на дизайн-проект</div>
                 </div>
-                <div class="col-md-7 mt-4 mt-md-0">
-                    <p>Введите номер телефона. К нему мы привяжем ваш подарок.</p>
-                    <div class="row justify-content-around mt-5 ">
-                        <input type="tel" name="phone" class="form-control align-self-end" id="phone-input" aria-describedby="emailHelp" placeholder="+7 999 999 99 99" maxlength="18">
-                        <button class="btn btnwhite2 mt-3 mt-md-0" >Задать вопросы</button>
+                <form class = "send_form" method="post" action = "mail/mail.php">
+                    <div class="col-md-7 mt-4 mt-md-0">
+                        <p>Введите номер телефона. К нему мы привяжем ваш подарок.</p>
+                        <div class="row justify-content-around mt-5 ">
+                            <input type="tel" name="phone" class="form-control align-self-end" id="phone-input" aria-describedby="emailHelp" placeholder="+7 999 999 99 99" maxlength="18">
+                            <button type = "submit" class="btn btnwhite2 mt-3 mt-md-0" >Задать вопросы</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -389,8 +400,8 @@
                     <div class="links">
                         <a href="https://instagram.com/nordy_space/">instagram</a>
                         <a href="https://vk.com/club43836736">vk</a>
-                        <a href="#">whatsapp</a>
-                        <a href="#">viber</a>
+                        <a href="whatsapp://send?phone=+79029191982">whatsapp</a>
+                        <a href="viber://add?number=79029191982">viber</a>
                     </div>
                 </div>
                 <div class="col-md-3 offset-md-1">
@@ -416,5 +427,13 @@
           $('input[name="phone"]').mask('+7 000 000 00 00');
         });
     </script>
+    <script>
+    $(document).ready(function() {
+        $(".send_form").submit(function(e){
+            window.open("/thank-you.html");
+            
+        });
+    });
+</script>
 </body>
 </html>

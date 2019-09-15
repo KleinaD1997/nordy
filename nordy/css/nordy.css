@@ -10,6 +10,16 @@
     padding:0;
     box-sizing: border-box;
 }
+button { 
+    border:none;
+    background: transparent;
+}
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
 
 img {
     width:100%;
@@ -149,6 +159,19 @@ h5 {
 #my-carousel, #my-carousel2, #my-carousel3 {
     padding-left:0px;
 }
+.navigation-slider 
+{
+    position: absolute;
+    margin-top: 85%;
+    z-index: 2;
+}
+.button-next {
+    left:90%;
+}
+.button-prev {
+    left: 70%;
+}
+
 
 .uniquedisign {
     background:url('/img/bg1.png') no-repeat;
@@ -632,5 +655,18 @@ input[type="tel"]::placeholder{
 @media (max-width: 580px) {
     h1 {
         font-size:26px;
+    }
+
+}
+@media (max-width: 350px) 
+{
+    .navigation-slider {
+        margin-top: 75%;
+    }
+    .button-prev {
+        left: 60%;
+    }
+    .button-next {
+        left: 82%;
     }
 }
